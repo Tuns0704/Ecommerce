@@ -1,3 +1,5 @@
+@import url("https://fonts.googleapis.com/css2?family=League+Spartan:wght@100;200;300;400;500;600;700;800;900&display=swap");
+
 :root {
 	--dark: #343232;
 	--light: #eee;
@@ -6,13 +8,15 @@
 	--pink: #ec4899;
 	--purple: #885cf6;
 	--darkred: #6c0707;
+	--red: #b21a1a;
 	--black: #000000;
+	--yellow: #ffa500;
 }
 
 * {
 	box-sizing: border-box;
 	margin: 0;
-	font-family: "Fira sans", sans-serif;
+	font-family: "League Spartan", sans-serif;
 }
 h1 {
 	font-size: 4rem;
@@ -20,15 +24,27 @@ h1 {
 }
 
 h2 {
-	font-size: 4rem;
+	font-size: 46px;
 }
 
 h4 {
-	font-size: 2rem;
+	font-size: 20px;
 }
 
 p {
 	font-size: 1.5rem;
+}
+
+button.normal {
+	font-size: 16px;
+	font-weight: 600;
+	padding: 15px 30px;
+	background-color: var(--white);
+	border-radius: 4px;
+	cursor: pointer;
+	border: none;
+	outline: none;
+	transition: 0.2s;
 }
 
 body {
@@ -176,15 +192,100 @@ hr {
 	text-align: center;
 }
 
+#products .pro-container {
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: space-between;
+	padding-top: 20px;
+}
+
 #products .pro {
 	width: 23%;
 	min-width: 250px;
-	padding: 10px;
-	border: 1px solid var(--gray);
-	border-radius: 20px;
+	padding: 10px 12px;
+	border: 1px solid var(--light);
+	border-radius: 25px;
+	cursor: pointer;
+	box-shadow: 20px 20px 30px rgba(0, 0, 0, 0.02);
+	margin: 15px 0;
+	transition: 0.2s ease;
+	position: relative;
+}
+
+#products .pro:hover {
+	box-shadow: 10px 10px 54px rgba(245, 62, 56, 0.2);
 }
 
 #products .pro img {
 	width: 100%;
 	border-radius: 20px;
+}
+
+#products .pro .des {
+	text-align: start;
+	padding: 10px 0;
+}
+
+#products .pro .des span {
+	color: var(--dark);
+	font-size: 16px;
+}
+
+#products .pro .des h5 {
+	padding-top: 7px;
+	color: var(--darkred);
+	font-size: 20px;
+}
+
+#products .pro .des i {
+	padding-top: 7px;
+	font-size: 18px;
+	color: var(--yellow);
+}
+
+#products .pro .des h4 {
+	padding-top: 7px;
+	font-size: 18px;
+	color: var(--darkred);
+}
+
+#products .pro .cart {
+	width: 40px;
+	height: 40px;
+	line-height: 40px;
+	border-radius: 50px;
+	background-color: var(--darkred);
+	font-weight: 500;
+	color: var(--light);
+	border: 1px solid var(--darkred);
+	position: absolute;
+	bottom: 20px;
+	right: 10px;
+}
+
+#banner {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	text-align: center;
+	background-image: url(images/banner/b2.jpg);
+	background-size: cover;
+	background-position: center;
+}
+
+#banner h4 {
+	color: var(--white);
+	font-size: 20px;
+}
+
+#banner h2 {
+	color: var(--white);
+	font-size: 50px;
+	padding: 10px 0;
+}
+
+#banner h2 span {
+	color: var(--red);
+	font-size: 50px;
 }

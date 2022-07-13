@@ -11,6 +11,7 @@
 	--red: #b21a1a;
 	--black: #000000;
 	--yellow: #ffa500;
+	--darkblue: #041e42;
 }
 
 * {
@@ -47,6 +48,23 @@ button.normal {
 	transition: 0.2s;
 }
 
+button.normal:hover {
+	background-color: var(--darkred);
+}
+
+button.white {
+	font-size: 15px;
+	font-weight: 600;
+	padding: 12px 18px;
+	background-color: transparent;
+	color: var(--white);
+	border-radius: 4px;
+	cursor: pointer;
+	border: 1px solid var(--white);
+	outline: none;
+	transition: 0.2s;
+}
+
 body {
 	min-height: 100vh;
 	color: var(--gray);
@@ -66,7 +84,10 @@ hr {
 
 .logo {
 	width: 120px;
-	padding: 10px;
+}
+
+#header .logo {
+	margin: 0 0 0 30px;
 }
 
 #header {
@@ -288,4 +309,226 @@ hr {
 #banner h2 span {
 	color: var(--red);
 	font-size: 50px;
+}
+#sm-banner {
+	display: flex;
+	justify-content: space-between;
+	flex-wrap: wrap;
+}
+
+#sm-banner .banner-box {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: flex-start;
+	text-align: center;
+	background-image: url(images/banner/b17.jpg);
+	background-size: cover;
+	background-position: center;
+	width: 850px;
+	height: 50vh;
+	padding: 30px;
+}
+
+#sm-banner .banner-box:nth-child(2) {
+	background-image: url(images/banner/b10.jpg);
+}
+
+#sm-banner h4 {
+	color: var(--white);
+	font-size: 28px;
+	font-weight: 300;
+	padding-bottom: 10px;
+}
+
+#sm-banner h2 {
+	color: var(--white);
+	font-size: 34px;
+	font-weight: 800;
+	padding-bottom: 10px;
+}
+
+#sm-banner span {
+	color: var(--white);
+	font-size: 20px;
+	font-weight: 500;
+	padding-bottom: 15px;
+}
+
+#sm-banner .banner-box:hover button {
+	background-color: var(--darkred);
+	border: 1px solid var(--darkred);
+}
+
+#banner-3 {
+	display: flex;
+	justify-content: space-between;
+	flex-wrap: wrap;
+}
+
+#banner-3 h2 {
+	color: var(--white);
+	font-size: 30px;
+	font-weight: 900;
+}
+
+#banner-3 h3 {
+	color: var(--darkred);
+	font-size: 25px;
+	font-weight: 800;
+}
+
+#banner-3 .banner-box {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: flex-start;
+	text-align: center;
+	background-image: url(images/banner/b7.jpg);
+	background-size: cover;
+	background-position: center;
+	width: 30%;
+	height: 30vh;
+	padding: 20px;
+	margin-bottom: 20px;
+}
+
+#banner-3 .banner-box:hover {
+	opacity: 0.8;
+}
+
+#banner-3 .banner-box:nth-child(2) {
+	background-image: url(images/banner/b4.jpg);
+}
+
+#banner-3 .banner-box:nth-child(3) {
+	background-image: url(images/banner/b18.jpg);
+}
+
+#newsletter {
+	display: flex;
+	justify-content: space-between;
+	flex-wrap: wrap;
+	align-items: center;
+	background-image: url(images/banner/b14.png);
+	background-repeat: no-repeat;
+	background-position: 20% 30%;
+	background-color: var(--darkblue);
+}
+
+#newsletter h4 {
+	font-size: 22px;
+	font-weight: 700;
+	color: var(--white);
+}
+
+#newsletter p {
+	font-size: 22px;
+	font-weight: 600;
+	color: var(--gray);
+}
+
+#newsletter p span {
+	color: var(--yellow);
+}
+
+#newsletter .form {
+	display: flex;
+	width: 40%;
+}
+
+#newsletter input {
+	height: 3.125rem;
+	padding: 0 1.25rem;
+	font-size: 14px;
+	width: 100%;
+	border: 1px solid transparent;
+	border-radius: 5px;
+	outline: none;
+	border-top-right-radius: 0;
+	border-bottom-right-radius: 0;
+}
+
+#newsletter button {
+	background-color: var(--darkred);
+	color: var(--white);
+	white-space: nowrap;
+	border-top-left-radius: 0;
+	border-bottom-left-radius: 0;
+}
+
+#newsletter button:hover {
+	opacity: 0.8;
+}
+
+footer {
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: space-between;
+}
+
+footer .col {
+	display: flex;
+	flex-direction: column;
+	align-items: flex-start;
+	margin-bottom: 20px;
+}
+
+footer .logo {
+	margin: 0 0 30px 0;
+}
+
+footer h4 {
+	color: var(--darkred);
+	font-size: 30px;
+	padding-bottom: 20px;
+}
+
+footer p {
+	color: var(--dark);
+	font-size: 20px;
+	margin: 0 0 8px 0;
+}
+footer a {
+	font-size: 20px;
+	text-decoration: none;
+	color: var(--dark);
+	margin-bottom: 10px;
+}
+
+footer .follow {
+	margin-top: 20px;
+}
+
+footer .follow i {
+	width: 30px;
+	background-image: linear-gradient(to right, var(--darkred), var(--dark));
+	-webkit-background-clip: text;
+	-webkit-text-fill-color: transparent;
+	cursor: pointer;
+	padding-right: 4px;
+}
+
+footer .install .row img {
+	border: 1px solid var(--darkred);
+	border-radius: 6px;
+}
+
+footer .install img {
+	margin: 10px 0 15px 0;
+}
+
+footer a:hover {
+	color: var(--darkred);
+}
+
+footer .follow i:hover {
+	background-image: linear-gradient(to right, var(--pink), var(--purple));
+	-webkit-background-clip: text;
+	-webkit-text-fill-color: transparent;
+}
+
+footer .copyright {
+	width: 100%;
+	text-align: center;
 }
